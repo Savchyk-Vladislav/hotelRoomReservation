@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue LT Std 65 Medium';
+    src: url('C:\\Users\\vlads\\OneDrive\\Desktop\\Универ\\3-й курс, 2 семестр\\Організація баз даних\\Курсова\\hotelRoomReservation\\fonts\\Helvetica Neue LT Std 65 Medium.otf') format('opentype');
+}
+
+#top-part {
+    width: 100%;
+    height: 500px;
+    background: #313f38;
+}
+
+#header {
+    position: relative;
+    top: 20px;
+    width: 1840px;
+    height: 50px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 180px;
+    height: 50px;
+    border-radius: 5px;
+    background: transparent;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.3s ease-in;
+}
+
+.light::before {
+    content: "";
+    position: absolute;
+    background-image: conic-gradient(
+      rgb(75, 110, 91) 20deg,
+      transparent 150deg
+    );
+    width: 400%;
+    height: 400%;
+    border-radius: 5px;
+    animation: rotate 3s linear infinite;
+}
+  
+.light::after {
+    content: "StaySwift";
+    position: absolute;
+    width: 170px;
+    height: 40px;
+    backdrop-filter: blur(35px);
+    -webkit-backdrop-filter: blur(35px);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Helvetica Neue LT Std 65 Medium', sans-serif;
+    font-size: 1.5em;
+    border-radius: 5px;
+}
+  
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+}
+
+#phone {
+    font-family: 'Helvetica Neue LT Std 65 Medium', sans-serif;
+    color: white;
+    font-size: 1.2em;
+    margin-right: 20px;
+}
