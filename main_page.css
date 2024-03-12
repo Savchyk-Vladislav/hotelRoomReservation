@@ -8,21 +8,33 @@
     src: url('C:\\Users\\vlads\\OneDrive\\Desktop\\Универ\\3-й курс, 2 семестр\\Організація баз даних\\Курсова\\hotelRoomReservation\\fonts\\Helvetica Neue LT Std 65 Medium.otf') format('opentype');
 }
 
+@font-face {
+    font-family: 'Miracle Regular';
+    src: url('C:\\Users\\vlads\\OneDrive\\Desktop\\Универ\\3-й курс, 2 семестр\\Організація баз даних\\Курсова\\hotelRoomReservation\\fonts\\Miracle Regular.ttf') format('opentype');
+}
+
+body {
+    height: 2000px;
+}
+
 #top-part {
     width: 100%;
-    height: 500px;
+    height: 1000px;
     background: #313f38;
 }
 
 #header {
-    position: relative;
-    top: 20px;
+    position: sticky;
+    top: 0;
     width: 1840px;
-    height: 50px;
+    height: 90px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 999;
+    background: transparent;
+    backdrop-filter: blur(10px);
 }
 
 .logo {
@@ -59,6 +71,7 @@
     backdrop-filter: blur(35px);
     -webkit-backdrop-filter: blur(35px);
     color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,6 +93,129 @@
 #phone {
     font-family: 'Helvetica Neue LT Std 65 Medium', sans-serif;
     color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     font-size: 1.2em;
     margin-right: 20px;
+}
+
+#nav {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-btn {
+    text-decoration: none;
+    font-family: 'Helvetica Neue LT Std 65 Medium', sans-serif;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 1.2em;
+    transition: .2s;
+    position: relative;
+}
+
+.nav-btn::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+    left: 0;
+    bottom: -6px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.nav-btn:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.nav-btn:hover {
+    font-size: 1.5em;
+}
+
+#big-logo {
+    font-family: 'Miracle Regular', sans-serif;
+    font-size: 220px;
+    position: absolute;
+    top: 150px;
+    left: 50px;
+}
+
+#big-logo .stay {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#big-logo .swift {
+    color: #fcd043;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#down-logo {
+    font-family: 'Helvetica Neue LT Std 65 Medium', sans-serif;
+    font-size: 26px;
+    color: #fcd043;
+    position: absolute;
+    top: 450px;
+    left: 70px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#history {
+    position: absolute;
+    top: 240px;
+    left: 1250px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1.5px gray solid;
+    border-radius: 100px;
+    padding: 10px 30px 10px 20px;
+}
+
+#history span {
+    font-family: 'Helvetica Neue LT Std 65 Medium', sans-serif;
+    font-size: 1.2em;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#history-text {
+    width: 350px;
+    height: 84px;
+    font-family: 'Helvetica Neue LT Std 65 Medium', sans-serif;
+    font-size: 18px;
+    color: gray;
+    position: absolute;
+    top: 390px;
+    left: 1250px;
+}
+
+#btn-down {
+    position: absolute;
+    top: 235px;
+    left: 1750px;
+    text-decoration: none;
+}
+
+#arrow {
+    position: absolute;
+    top: 33px;
+    left: 26px;
+}
+
+#btn-down:hover #border {
+    fill: #fcd043;
+    transition: fill 0.3s ease;
+}
+
+#btn-down #border {
+    fill: transparent;
+    transition: fill 0.3s ease;
 }
