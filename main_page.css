@@ -14,12 +14,12 @@
 }
 
 body {
-    height: 2000px;
+    height: 5000px;
 }
 
 #top-part {
     width: 100%;
-    height: 1000px;
+    height: 2000px;
     background: #313f38;
 }
 
@@ -218,4 +218,67 @@ body {
 #btn-down #border {
     fill: transparent;
     transition: fill 0.3s ease;
+}
+
+#main_room {
+    position: absolute;
+    top: 580px;
+    left: 20px;
+}
+
+#buttons_main_room {
+    position: absolute;
+    top: 580px;
+    left: 775px;
+    width: 1105px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn_main_room {
+    width: 368.33px;
+    height: 150px;
+    background-color: rgba(49, 63, 56, 0.5);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 180px;
+}
+
+.btn_main_room2 {
+    width: 368.33px;
+    height: 150px;
+    background-color: rgb(255, 203, 31);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn_main_room2 span {
+    font-family: 'Helvetica Neue LT Std 65 Medium', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+#palka_for_btn {
+    width: 2px;
+    height: 75px;
+    background-color: gray;
+    position: absolute;
+    top: 620px;
+    left: 1143px;
+}
+
+.text_btn_main {
+    font-family: 'Helvetica Neue LT Std 65 Medium', sans-serif;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
 }
